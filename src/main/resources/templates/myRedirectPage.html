@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <form id="formid" name="myform" th:object="${myRequestXmlForm}" method="POST" action="https://es-staging.cdac.in/esignlevel2/2.1/form/signdoc">
+
+       <input th:field="*{eSignRequest}" type="hidden" name="eSignRequest" id="eSignRequest" />
+       <input th:field="*{aspTxnID}" type="hidden" name="aspTxnID" id="aspTxnID" />
+<!--        <input th:field="*{contentType}" type="hidden" name="Content-Type" id="Content-Type" /> -->
+		<input type="hidden"  id = "Content-Type" name="Content-Type" value="application/xml"/>
+
+<button type="Submit" >Submit</button>
+
+    </form>
+</body>
+
+</html>

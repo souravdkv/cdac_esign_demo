@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Esign AuthMode="1" aspId="CDAC-901" ekycId="" ekycIdType="A"
+	responseSigType="pkcs7"
+	responseUrl="https://10.208.37.160:9090/SpringBootESign/finalResponse"
+	sc="Y" ts="2024-05-24T16:13:20" txn="2076166972" ver="2.1">
+	<Docs>
+		<InputHash docInfo="My Document" hashAlgorithm="SHA256"
+			id="1">0a91a0c565b01e5076eba5937ec0f373f33692c86d521736aea9ba8b54fff6cb
+		</InputHash>
+	</Docs>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod
+				Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+			<SignatureMethod
+				Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+			<Reference URI="">
+				<Transforms>
+					<Transform
+						Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+				</Transforms>
+				<DigestMethod
+					Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+				<DigestValue>LVZnVCpwNqPp1EgK4xbaoGrfFxCKftZPZRE3LXq3Jas=
+				</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>SlmdJ8yj10pknyag36XLLPKCSAEAACPB6HMvYH4mvh/2UDBjfvPZd6JO86d8rIYNfEhrlzrNzVxM
+			Py6OedcyYT+cTXjkkI0+p/MCU1OlhiVIiEpNJTopShSGdR1bdg4UExVLRj+86K4KbXHJxi3OQPFu
+			Cbcd1BnsPZeKqm8MYYd7Rxf/Y7F7GRHdY4LLrin86VjNkg2Dzl3ZbcR1hkwfnBR/zwa37CQDHpBE
+			e/U324n8v1sKIrh/YzGmUeqZGerVoJJ+3l/5WA6f+6xkOLf1zonE+8PQikriSZ7xY7Q7fAFrWs4r
+			JE4B6nrbu+y9a6F8EmlKnAN7fdHVVs92wknxow==
+		</SignatureValue>
+	</Signature>
+</Esign>

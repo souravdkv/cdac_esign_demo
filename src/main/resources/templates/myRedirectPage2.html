@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8">
+      <title>Upload Result</title>
+   </head>
+    
+   <body>
+<!--  	<form name="myRedirectForm" id="formid" th:object="${myRequestXmlForm}"  action="testFormSubmit" method="post"> -->
+<form name="myRedirectForm" id="formid" th:object="${myRequestXmlForm}"  action="https://es-staging.cdac.in/esignlevel2/2.1/form/signdoc" method="POST">
+<!-- 			 <div style="text-align: center"> -->
+<!-- 	         	<input th:field="*{id}" type="hidden" name="id"/>  -->
+<!-- 			 </div> -->
+<!-- 			 <div style="text-align: center"> -->
+<!-- 	         	<input th:field="*{type}" type="hidden" name="type"/>  -->
+<!-- 			 </div> -->
+<!-- 			 <div style="text-align: center"> -->
+<!-- 	         	<input th:field="*{description}" type="hidden" name="description"/>  -->
+<!-- 			 </div> -->
+			 <div style="text-align: center">
+	         	<input th:field="*{eSignRequest}" type="hidden" name="eSignRequest" id="eSignRequest" /> 
+			 </div>
+			 <div style="text-align: center">
+	         	<input th:field="*{aspTxnID}" type="hidden" name="aspTxnID" id="aspTxnID"/> 
+			 </div>
+			 <div style="text-align: center">
+	         	<input th:field="*{contentType}" type="hidden" name="Content-Type" id="Content-Type" /> 
+			 </div>
+        <div><br/><br/><br/><br/><br/></div>
+        <div class="col-sm-4"></div><div class="col-sm-">
+        	<input type="submit" value="Click here to continue" />
+<!-- 				<button type="submit" value="Click here to continue"></button> -->
+       	</div>
+    
+</form>
+    <script type="text/javascript">
+
+//      $(document).ready(function() { 
+//          document.myRedirectForm.submit(); 
+//      }); 
+
+	 /*   $(document).ready(function() {
+        $('#myRedirectForm').on('click', function(e) {
+
+            var formData = new FormData(document.getElementById("formid"));
+			alert(formData);
+            $.ajax({
+                //url : '/testFormSubmit',
+                url : 'https://es-staging.cdac.in/esign2.1level1/2.1/form/signdoc',
+                type : "POST",
+                data : formData,
+                enctype : 'multipart/form-data',
+                processData : false,
+                contentType : false,
+                dataType : "application/json",
+                //async : false,
+                xhrFields : {
+                    withCredentials : true
+                },
+                success : function(eSignRequestXML) {
+                    //alert(requestInfo);
+                    //var eSignRequestXML=requestInfo.reqXml;
+                    //var eSignRequestTxn=requestInfo.reqTxn;
+                    alert(eSignRequestXML);
+                    $("#eSignRequest").val(eSignRequestXML);
+                    $("#aspTxnID").val("bb50dc54-79e8-42ad-b86b-7ec097000137");
+                //    $("#aspTxnID").val("ESIGN46");
+                    $("#formid").submit();
+                },
+                error : function(ts) {
+                    alert("Hello frm js err");
+                    alert("Error " + ts.responseText);
+                }
+
+            });
+            e.preventDefault();
+        });
+       
+
+    });*/
+</script>
+       
+   </body>
+    
+</html>
