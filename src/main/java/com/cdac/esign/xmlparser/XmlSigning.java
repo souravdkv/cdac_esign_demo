@@ -105,7 +105,7 @@ public class XmlSigning {
         KeyInfoFactory keyInfoFact = xmlSigFactory.getKeyInfoFactory();
 
         try {
-        	PublicKey privKey = new Encryption().getPublicKey("testasp.cer");
+        	PublicKey privKey = new Encryption().getPublicKey("public_certificate.cer");
             keyValue = keyInfoFact.newKeyValue(privKey);
         }catch (KeyException ex) {
             ex.printStackTrace();

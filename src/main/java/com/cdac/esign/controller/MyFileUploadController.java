@@ -175,11 +175,11 @@ public class MyFileUploadController {
 			 formXmalDataAsp.setEkycId("");
 			 //formXmalDataAsp.setEkycId("1916c708a819a70b098b71f8d95f9936e9b86a90d948107e4b9172d65bceefa5");
 			  formXmalDataAsp.setEkycIdType("A");
-			 formXmalDataAsp.setAspId("CDAC-901");
+			 formXmalDataAsp.setAspId("GIDC-900");
 			  formXmalDataAsp.setAuthMode(myUploadForm.getAuthType());
 			  formXmalDataAsp.setResponseSigType("pkcs7");
 			  //formXmalDataAsp.setResponseUrl("url");
-			  formXmalDataAsp.setResponseUrl("https://10.208.37.160:9090/SpringBootESign/finalResponse");
+			  formXmalDataAsp.setResponseUrl("https://localhost:9090/SpringBootESign/finalResponse");
 			  
 			  formXmalDataAsp.setId("1");
 			  formXmalDataAsp.setHashAlgorithm("SHA256");
@@ -192,7 +192,7 @@ public class MyFileUploadController {
 		      String xmlData = "";
 			  try {
 		      Encryption encryption = new Encryption();
-			  PrivateKey rsaPrivateKey =  encryption.getPrivateKey("testasp.pem");
+			  PrivateKey rsaPrivateKey =  encryption.getPrivateKey("mykey.pem");
 			  File encrFile = new File(uploadRootDir.getAbsolutePath() + File.separator + "Excrypted.xml");
 			  String encryptedFile = uploadRootDir.getAbsolutePath() + File.separator + "Excrypted.xml";
 			  xmlData = new XmlSigning().signXmlStringNew(uploadRootDir.getAbsolutePath() + File.separator + "Testing.xml", rsaPrivateKey);

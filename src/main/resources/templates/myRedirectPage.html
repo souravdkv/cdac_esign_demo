@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form id="formid" name="myform" th:object="${myRequestXmlForm}" method="POST" action="https://es-staging.cdac.in/esignlevel2/2.1/form/signdoc">
+    <form id="formid" name="myform" th:object="${myRequestXmlForm}" method="POST" action="https://es-staging.cdac.in/esignlevel1/2.1/form/signdoc">
 
        <input th:field="*{eSignRequest}" type="hidden" name="eSignRequest" id="eSignRequest" />
        <input th:field="*{aspTxnID}" type="hidden" name="aspTxnID" id="aspTxnID" />
